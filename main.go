@@ -50,6 +50,11 @@ func main() {
 				err := note.Push()
 				if err != nil {
 					log.Println("notification push error:", err)
+					// usually because our watcher helper program got removed
+					err := gosxnotifier.NewTerminalNotifier()
+					if err != nil {
+						log.Fatal("can not install terminal notifier:", err)
+					}
 				}
 			} else {
 				log.Println("event:", ev)
