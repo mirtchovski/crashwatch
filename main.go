@@ -11,8 +11,8 @@ import (
 	"path"
 	"strings"
 
-	"code.google.com/p/go.exp/fsnotify"
 	"github.com/mirtchovski/gosxnotifier"
+	"gopkg.in/fsnotify.v0"
 )
 
 var dir = flag.String("dir", "/Library/Logs/DiagnosticReports/:~/Library/Logs/DiagnosticReports", "column-separated list of directories to monitor")
